@@ -6,21 +6,21 @@
 </template>
 
 <script>
-import individualPracticeRoom from './spaces/individual-practice-room';
+import individualPracticeRoom from './spaces/individual-practice-room'
 
 export default {
   props: ['space'],
   methods: {
-    toComponent(space) {
+    toComponent (space) {
       return {
-        개인연습실: 'individualPracticeRoom',
-      }[space];
-    },
+        개인연습실: 'individualPracticeRoom'
+      }[space]
+    }
   },
   components: {
-    individualPracticeRoom,
-  },
-};
+    individualPracticeRoom
+  }
+}
 </script>
 
 <style>

@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       mobileMenuVisibility: false,
       categories: {
@@ -48,16 +48,16 @@ export default {
         '단체 공간': ['세미나실', '다용도실', '무예실', '합주실'],
         '행사 공간': ['울림홀', '미래홀', '오픈 스페이스'],
         책다방: [],
-        창작공방: [],
-      },
-    };
+        창작공방: []
+      }
+    }
   },
   methods: {
-    toggleMenuVisibility() {
-      this.mobileMenuVisibility = !this.mobileMenuVisibility;
-    },
-  },
-};
+    toggleMenuVisibility () {
+      this.mobileMenuVisibility = !this.mobileMenuVisibility
+    }
+  }
+}
 </script>
 
 <style>

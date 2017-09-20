@@ -1,49 +1,49 @@
 <template>
   <div id="app">
-    <navbar/>
-    <router-view></router-view>
+    <app-navbar />
+    <router-view />
     <div class="container">
-      <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop"></full-calendar>
+      <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" />
     </div>
-    <foot/>
+    <app-footer />
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar/Navbar';
-import Foot from './components/Foot/Foot';
+import appNavbar from './components/Navbar/Navbar'
+import appFooter from './components/Footer/Footer'
 
 export default {
   name: 'app',
   components: {
-    Navbar, Foot,
+    appNavbar, appFooter
   },
-  data() {
+  data () {
     return {
       events: [
         {
           title: '이벤트',
-          start: '2017-09-14',
+          start: '2017-09-14'
         },
         {
           title: '이벤트2',
           start: '2017-09-14',
-          end: '2017-09-21',
+          end: '2017-09-21'
         },
         {
           title: 'event3',
           start: '2017-09-05T12:30:00',
-          allDay: false,
-        },
-      ],
-    };
+          allDay: false
+        }
+      ]
+    }
   },
   methods: {
-    drop() {
-      console.log('dropped');
-    },
-  },
-};
+    drop () {
+      // alert('droped');
+    }
+  }
+}
 </script>
 
 <style lang="scss">

@@ -1,14 +1,11 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '@/views/Home/Home';
-import Login from '@/views/Login/Login';
-import PostCreate from '@/views/PostCreate/PostCreate';
-import PostDetail from '@/views/PostDetail/PostDetail';
-import PostList from '@/views/PostList/PostList';
-import Setting from '@/views/Setting/Setting';
-import Intro from '@/views/Intro/Intro';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/views/Home/Home'
+import Login from '@/views/Login/Login'
+import Setting from '@/views/Setting/Setting'
+import Intro from '@/views/Intro/Intro'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -16,39 +13,23 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home,
+      component: Home
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login,
-    },
-    {
-      path: '/post/create',
-      name: 'PostCreate',
-      component: PostCreate,
-    },
-    {
-      path: '/post/:post_id',
-      name: 'PostDetail',
-      component: PostDetail,
-      props: true,
-    },
-    {
-      path: '/post',
-      name: 'PostList',
-      component: PostList,
+      component: Login
     },
     {
       path: '/setting',
       name: 'Setting',
-      component: Setting,
+      component: Setting
     },
     {
       path: '/:space',
       name: 'SpaceIntro',
       component: Intro,
-      props: true,
-    },
-  ],
-});
+      props: true
+    }
+  ]
+})

@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  name: 'individualPracticeRoom',
-};
+  name: 'individualPracticeRoom'
+}
 </script>
 
 <style>

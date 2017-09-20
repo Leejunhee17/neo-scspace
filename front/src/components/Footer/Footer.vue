@@ -62,7 +62,7 @@
         </div>
         <h2><strong>연락하기</strong></h2>
         <p>대전광역시 유성구 대학로 291 한국과학기술원 N13-1 장영신학생회관 309호</p>
-        <p>평일 19~21시 상근 · 042-350-0386 · scspace.kaist@gmail.com</p><br>
+        <p>평일 19~21시 상근 · 042-350-0386 · scspace.kaist@gmail.com</p><br />
 
         <p>Contribution via <a href="https://github.com/scspace/scspace">Github</a>.</p>
         <p>Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.</p>
@@ -74,8 +74,7 @@
 
 <script>
 export default {
-
-};
+}
 </script>
 
 <style scoped>
