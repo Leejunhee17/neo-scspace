@@ -4,5 +4,8 @@ module.exports = {
         "standard",
         "promise",
         "vue"
-    ]
+    ],
+    globals: {
+        '$t': true
+    }
 };

@@ -2,9 +2,7 @@
   <div id="app">
     <app-navbar />
     <router-view />
-    <div class="container">
-      <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" />
-    </div>
+    <!-- <div class="container"></div> -->
     <app-footer />
   </div>
 </template>
@@ -12,6 +10,9 @@
 <script>
 import appNavbar from './components/Navbar/Navbar'
 import appFooter from './components/Footer/Footer'
+
+/* eslint-disable no-unused-vars */
+import fontawesome from 'font-awesome/css/font-awesome.css'
 
 export default {
   name: 'app',

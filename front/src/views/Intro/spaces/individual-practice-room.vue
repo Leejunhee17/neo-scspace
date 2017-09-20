@@ -1,10 +1,14 @@
+<i18n src="./../../../locales/general.yaml"></i18n>
+
 <template>
-  <div>개인연습실</div>
+  <div>
+    <p>{{ $t('individual-practice-room') }}</p>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'individualPracticeRoom'
+  name: 'intro-individual-practice-room'
 }
 </script>
 

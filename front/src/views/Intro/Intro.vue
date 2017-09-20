@@ -1,7 +1,11 @@
 <template>
   <div>
-    <h1>소개</h1>
-    <component :is="toComponent(space)"/>
+    <div class="container">
+      <section class="section">
+        <component :is="toComponent(space)"/>
+        <!-- <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" /> -->
+      </section>
+    </div>
   </div>
 </template>
 

@@ -60,7 +60,8 @@
             </div>
           </div>
         </div>
-        <h2><strong>연락하기</strong></h2>
+
+        <h2 id="contact"><strong>연락하기</strong></h2>
         <p>대전광역시 유성구 대학로 291 한국과학기술원 N13-1 장영신학생회관 309호</p>
         <p>평일 19~21시 상근 · 042-350-0386 · scspace.kaist@gmail.com</p><br />
 
@@ -84,5 +85,9 @@ footer.footer {
 
 footer.footer h2 {
   margin-bottom: 0.7em;
+}
+
+#contact {
+  margin-top: 3em;
 }
 </style>

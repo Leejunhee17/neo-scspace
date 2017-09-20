@@ -1,0 +1,54 @@
+ko:
+# 고유명사
+  space-committee: "학생문화공간위원회"
+  
+  individual-spaces: "개인 공간"
+  group-spaces: "단체 공간"
+  event-spaces: "행사 공간"
+
+  piano-room: "피아노실"
+  individual-practice-room: "개인연습실"
+  seminar-room: "세미나실"
+  multipurpose-room: "다용도실"
+  dance-studio: "무예실"
+  group-practice-room: "합주실"
+  ullim-hall: "울림홀"
+  mirae-hall: "미래홀"
+  open-space: "오픈스페이스"
+  bookdabang: "책다방"
+  workshop: "창작공방"
+
+# 일반명사
+  manage: '관리'
+  settings: '설정'
+  notifications: '알림'
+  my-reservation: '내 예약'
+  sign-in: '로그인'
+  sign-out: '로그아웃'
+
+en:
+  space-committee: "SCS Committee"
+
+  individual-spaces: "Individual Spaces"
+  group-spaces: "Group Spaces"
+  event-spaces: "Event Spaces"
+
+  piano-room: "Piano Room"
+  individual-practice-room: "Individual Practice Room"
+  seminar-room: "Seminar Room"
+  multipurpose-room: "Multipurpose Room"
+  dance-studio: "Dance Studio"
+  group-practice-room: "Group Practice Room"
+  ullim-hall: "Ullim Hall"
+  mirae-hall: "Mirae Hall"
+  open-space: "Open Space"
+  bookdabang: "Bookdabang"
+  workshop: "Workshop"
+
+# 일반명사
+  manage: 'Manage'
+  settings: 'Settings'
+  notifications: 'Notifications'
+  my-reservation: 'My Reservation'
+  sign-in: 'Sign In'
+  sign-out: 'Sign Out'

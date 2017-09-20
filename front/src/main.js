@@ -2,8 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
+import VueI18n from 'vue-i18n'
 import calendar from 'vue-full-calendar'
+import axios from 'axios'
 import jquery from 'jquery'
 
 import App from './App'
@@ -14,15 +15,20 @@ window.jQuery = jquery
 window.$ = jquery
 
 Vue.config.productionTip = false
+
 Vue.use(Vuex)
+Vue.use(VueI18n)
 Vue.use(calendar)
 Vue.prototype.$axios = axios
+
+const i18n = new VueI18n({locale: 'en'})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
+  i18n,
   template: '<App/>',
   components: { App }
 })
