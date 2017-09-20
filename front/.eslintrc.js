@@ -35,6 +35,6 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'linebreak-style': [ 1, "unix" ]
+    'linebreak-style': [ 0, "unix" ] // ignore linebreak-style rule
   }
 }
