@@ -58,7 +58,7 @@
                 {{ this.$t('ullim-hall') }}
               </router-link>
               <router-link :to="'/mirea-hall'" class="navbar-item">
-                {{ this.$t('mirea-hall') }}
+                {{ this.$t('mirae-hall') }}
               </router-link>
               <router-link :to="'/open-space'" class="navbar-item">
                 {{ this.$t('open-space') }}
