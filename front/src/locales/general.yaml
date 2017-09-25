@@ -14,11 +14,12 @@ ko:
   group-practice-room: "합주실"
   ullim-hall: "울림홀"
   mirae-hall: "미래홀"
-  open-space: "오픈스페이스"
+  open-space: "오픈 스페이스"
   bookdabang: "책다방"
   workshop: "창작공방"
 
 # 일반명사
+  spaces: '공간'
   manage: '관리'
   settings: '설정'
   notifications: '알림'
@@ -46,6 +47,7 @@ en:
   workshop: "Workshop"
 
 # 일반명사
+  spaces: 'Spaces'
   manage: 'Manage'
   settings: 'Settings'
   notifications: 'Notifications'

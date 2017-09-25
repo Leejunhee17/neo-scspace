@@ -21,14 +21,11 @@ Vue.use(VueI18n)
 Vue.use(calendar)
 Vue.prototype.$axios = axios
 
-const i18n = new VueI18n({locale: 'en'})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
-  i18n,
   template: '<App/>',
   components: { App }
 })

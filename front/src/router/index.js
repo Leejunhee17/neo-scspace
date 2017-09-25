@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home/Home'
 import Login from '@/views/Login/Login'
-import Setting from '@/views/Setting/Setting'
-import Intro from '@/views/Intro/Intro'
+import Settings from '@/views/Settings/Settings'
+import SpaceIntro from '@/views/Intro/Intro'
 
 Vue.use(Router)
+
+const spaces = 'workshop|bookdabang|piano-room|individual-practice-room|seminar-room|multipurpose-room|dance-studio|group-practice-room|ullim-hall|mirae-hall|open-space'
 
 export default new Router({
   mode: 'history',
@@ -21,14 +23,14 @@ export default new Router({
       component: Login
     },
     {
-      path: '/setting',
-      name: 'Setting',
-      component: Setting
+      path: '/settings',
+      name: 'Settings',
+      component: Settings
     },
     {
-      path: '/:space',
+      path: `/:space(${spaces})`,
       name: 'SpaceIntro',
-      component: Intro,
+      component: SpaceIntro,
       props: true
     }
   ]

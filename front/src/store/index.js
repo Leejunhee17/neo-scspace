@@ -5,6 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    language: 'ko_KR'
+    language: 'ko'
+  },
+  mutations: {
+    toggleLanguage (state) {
+      state.language = (state.language === 'ko') ? 'en' : 'ko'
+    },
+    updateLanguage (state, newLanguage) {
+      state.language = newLanguage
+    }
   }
 })
