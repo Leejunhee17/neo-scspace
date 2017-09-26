@@ -50,6 +50,7 @@ export default {
 <style lang="scss">
   @import "~bulma/sass/utilities/initial-variables";
   $primary: #ffb3b3;
+  $link-hover: darken($primary, 14%);
   @import "~bulma";
   @import '~fullcalendar/dist/fullcalendar.css';
 </style>

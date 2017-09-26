@@ -1,7 +1,10 @@
 ko:
 # 고유명사
   space-committee: "학생문화공간위원회"
-  
+  student-center: "장영신학생회관"
+  address: "대전광역시 유성구 대학로 291 한국과학기술원 N13-1 장영신학생회관 309호"
+  working-hour: '평일 19-21시 상근'
+
   individual-spaces: "개인 공간"
   group-spaces: "단체 공간"
   event-spaces: "행사 공간"
@@ -18,17 +21,34 @@ ko:
   bookdabang: "책다방"
   workshop: "창작공방"
 
-# 일반명사
+# 일반명사 - 네비게이션 바
   spaces: '공간'
+  poster: '게시물'
   manage: '관리'
   settings: '설정'
   notifications: '알림'
   my-reservation: '내 예약'
+  my-teams: '내 팀'
   sign-in: '로그인'
   sign-out: '로그아웃'
 
+# 일반명사 - 푸터
+  intro: '소개'
+  business: '사업'
+  history: '역사'
+  statistics: '통계'
+  contact: '연락하기'
+
+# 일반명사 - 인터페이스
+  notice: '공지사항'
+  more: '더 보기'
+
 en:
-  space-committee: "SCS Committee"
+# 고유명사
+  space-committee: "SCSC"
+  student-center: "Student Center"
+  address: "Room 309, N13-1, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon 34141"
+  working-hour: 'Working Weekday 19-21'
 
   individual-spaces: "Individual Spaces"
   group-spaces: "Group Spaces"
@@ -46,11 +66,24 @@ en:
   bookdabang: "Bookdabang"
   workshop: "Workshop"
 
-# 일반명사
+# 일반명사 - 네비게이션 바
   spaces: 'Spaces'
+  poster: 'Poster'
   manage: 'Manage'
   settings: 'Settings'
   notifications: 'Notifications'
   my-reservation: 'My Reservation'
+  my-teams: 'My Teams'
   sign-in: 'Sign In'
   sign-out: 'Sign Out'
+
+# 일반명사 - 푸터
+  intro: 'Introduction'
+  business: 'Business'
+  history: 'History'
+  statistics: 'Statistics'
+  contact: 'Contact'
+
+# 일반명사 - 인터페이스
+  notice: 'Notice'
+  more: 'More'

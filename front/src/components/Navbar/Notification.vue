@@ -1,10 +1,10 @@
 <template>
-  <router-link to="/reservation" class="navbar-item">
+  <a to="/reservation" class="navbar-item">
     <div class="navbar-content">
       <small class="notification-date"> 내일 &#183; <span class="has-text-success"> 승인됨 </span></small> <br />
       <div> {{ title }} </div>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script>

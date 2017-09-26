@@ -4,7 +4,7 @@
     <div class="container">
       <div class="navbar-brand">
         <logo />
-        <mobile-notifications />
+        <mobile-notifications :mobileMenuVisibility="mobileMenuVisibility" />
         <button @click="toggleMenuVisibility" data-target="nav-menu" class="button navbar-burger" :class="{'is-active':mobileMenuVisibility}" style="border-color: transparent">
           <span />
           <span />
@@ -14,6 +14,7 @@
       <div class="navbar-menu" :class="{'is-active':mobileMenuVisibility}" id="nav-menu">
         <div class="navbar-start">
           <spaces />
+          <poster />
         </div>
         <div class="navbar-end">
           <router-link to="/manage" class="navbar-item"> {{ $t('manage', language) }} </router-link>
@@ -29,6 +30,7 @@
 <script>
 import Logo from './Logo'
 import Spaces from './Spaces'
+import Poster from './Poster'
 import Notifications from './Notifications'
 import MobileNotifications from './MobileNotifications'
 import Settings from './Settings'
@@ -36,7 +38,7 @@ import Settings from './Settings'
 import { mapState, mapMutations } from 'vuex'
 
 export default {
-  components: { Logo, Spaces, Notifications, MobileNotifications, Settings },
+  components: { Logo, Spaces, Poster, Notifications, MobileNotifications, Settings },
   data () {
     return {
       mobileMenuVisibility: false

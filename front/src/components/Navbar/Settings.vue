@@ -1,3 +1,4 @@
+<i18n src="./../../locales/general.yaml"></i18n>
 <template>
   <div class="navbar-item has-dropdown is-hoverable">
     <div class="navbar-link">
@@ -9,8 +10,8 @@
       <router-link to="/settings" class="navbar-item">
         {{ $t('settings', language) }}
       </router-link>
-      <router-link to="/history" class="navbar-item">
-        {{ $t('my-reservation', language) }}
+      <router-link to="/team" class="navbar-item">
+        {{ $t('my-teams', language) }}
       </router-link>
       <hr class="navbar-divider">
       <router-link to="/logout" class="navbar-item">
