@@ -80,4 +80,9 @@ footer.footer li>a:hover {
   color: black;
   text-decoration: underline;
 }
+
+footer.footer li>a.is-active {
+  color: black;
+  text-decoration: underline;
+}
 </style>

@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
 #notification-icon {
-  padding-right: 0.5rem;
+  padding-right: 1rem;
 }
 
 #notification-icon::after {

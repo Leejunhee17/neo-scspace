@@ -18,7 +18,7 @@
         </div>
         <div class="navbar-end">
           <router-link to="/manage" class="navbar-item"> {{ $t('manage', language) }} </router-link>
-          <a class="navbar-item"><i @click="toggleLanguage" class="fa fa-globe"/></a> <!-- Debuging -->
+          <a @click="toggleLanguage" class="navbar-item"><i class="fa fa-globe"/></a> <!-- Debuging -->
           <notifications />
           <settings />
         </div>
@@ -62,8 +62,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar-burger {
   margin-left: 0;
+  // color: white;
+  // background-color: rgb(255, 56, 96);
 }
 </style>
