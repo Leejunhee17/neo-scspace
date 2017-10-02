@@ -14,7 +14,7 @@ import appFooter from './components/Footer/Footer'
 /* eslint-disable no-unused-vars */
 import fontawesome from 'font-awesome/css/font-awesome.css'
 
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'app',
@@ -28,11 +28,17 @@ export default {
       }
     }
   },
+  mounted () {
+    this.initLanguage()
+  },
   components: {
     appNavbar, appFooter
   },
   computed: {
     ...mapState(['language'])
+  },
+  methods: {
+    ...mapMutations(['initLanguage'])
   }
 }
 </script>
