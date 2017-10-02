@@ -26,13 +26,18 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'intro-ullim-hall',
+  metaInfo () {
+    return {
+      title: this.$t('ullim-hall', this.language)
+    }
+  },
   computed: {
     ...mapState(['language'])
   }
 }
 </script>
 
-<style>
+<style scoped>
 h1.title.is-1 {
   font-family: 'Kopub Batang';
   margin-top: 1.5rem;

@@ -11,6 +11,11 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'intro-multipurpose-room',
+  metaInfo () {
+    return {
+      title: this.$t('multipurpose-room', this.language)
+    }
+  },
   computed: {
     ...mapState(['language'])
   }

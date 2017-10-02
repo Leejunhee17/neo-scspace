@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
+import VueMeta from 'vue-meta'
 import calendar from 'vue-full-calendar'
 import axios from 'axios'
 import jquery from 'jquery'
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 
 Vue.use(Vuex)
 Vue.use(VueI18n)
+Vue.use(VueMeta)
 Vue.use(calendar)
 Vue.prototype.$axios = axios
 
