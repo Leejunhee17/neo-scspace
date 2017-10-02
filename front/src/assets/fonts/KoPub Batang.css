@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'KoPub Batang';
+  src:  url('KoPub Batang Medium.woff2') format('woff2'),
+        url('KoPub Batang Medium.woff') format('woff');
+}

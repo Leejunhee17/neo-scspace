@@ -8,6 +8,7 @@ import Poster from '@/views/Poster/Poster'
 import Settings from '@/views/Settings/Settings'
 
 import MyTeam from '@/views/Team/Team'
+import Reserve from '@/views/Reservation/Reserve'
 import MyReservation from '@/views/Reservation/MyReservation'
 
 import CommitteeIntro from '@/views/Intro/Committee'
@@ -62,7 +63,11 @@ export default new Router({
       name: 'MyReservation',
       component: MyReservation
     },
-
+    {
+      path: '/reserve',
+      name: 'Reserve',
+      component: Reserve
+    },
     {
       path: '/intro/committee',
       name: 'CommitteeIntro',

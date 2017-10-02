@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <div class="intro-container">
     <div class="container">
-      <section class="section">
-        <component :is="space"/>
-        <!-- <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" /> -->
-      </section>
+      <component :is="space"/>
+      <!-- <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" /> -->
     </div>
   </div>
 </template>
@@ -41,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+.intro-container {
+  padding: 1.5rem;
+}
 </style>

@@ -2,6 +2,7 @@
 
 <template>
   <div>
+    <router-link to="/reserve" class="button is-primary">예약하기</router-link>
     <p>{{ $t('piano-room', language) }}</p>
   </div>
 </template>

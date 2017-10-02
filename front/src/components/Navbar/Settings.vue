@@ -1,7 +1,7 @@
 <i18n src="./../../locales/general.yaml"></i18n>
 <template>
   <div class="navbar-item has-dropdown is-hoverable">
-    <div class="navbar-link">
+    <div class="navbar-link is-hidden-touch">
       <span class="icon">
         <i class="fa fa-user-circle"></i>
       </span>

@@ -49,8 +49,16 @@ export default {
 
 <style lang="scss">
   @import "~bulma/sass/utilities/initial-variables";
+  
   $primary: #ffb3b3;
   $link-hover: darken($primary, 14%);
+
+  $navbar-tab-hover-border-bottom-color: $black;
+  $navbar-tab-active-color: $black;
+  $navbar-tab-active-border-bottom-color: $black;
+  $navbar-tab-active-border-bottom-width: 2px;
+
   @import "~bulma";
-  @import '~fullcalendar/dist/fullcalendar.css';
+  @import "~fullcalendar/dist/fullcalendar.css";
+  @import "./assets/fonts/KoPub Batang.css";
 </style>
