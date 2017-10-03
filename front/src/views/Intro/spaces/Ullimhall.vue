@@ -40,7 +40,7 @@ export default {
 <style scoped>
 h1.title.is-1 {
   font-family: 'Kopub Batang';
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 p {
   margin-bottom: 1rem;

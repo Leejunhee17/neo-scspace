@@ -10,7 +10,7 @@ en:
     <figure class="image is-16by9">
       <img src="../../assets/community_yard.jpg" alt="장영신학생회관 커뮤니티 마당 행사 풍경">
     </figure>
-    <div class="columns">
+    <!-- <div class="columns">
       <div class="column">
         <div class="card notification">
           <h1 class="title">{{ $t('notice', language) }}</h1>
@@ -22,7 +22,7 @@ en:
         </div>
       </div>
       <div class="column"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
