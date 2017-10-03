@@ -82,7 +82,6 @@ export default {
       this.subNavVisibility = true
     },
     toggleSubNav (currentCategory) {
-      window.prompt('touched!')
       if (this.currentCategory === currentCategory) this.subNavVisibility = !this.subNavVisibility
       else this.currentCategory = currentCategory
     }

@@ -30,10 +30,10 @@ en:
           </div>
           <div class="column is-6">
             <h2 id="contact"><strong>{{ $t('contact', language) }}</strong></h2>
-            <p>{{ $t('address', language) }}</p>
+            <p><a href="https://www.google.com/maps/place/장영신+학생회관/@36.372944,127.3606679,19.58z/data=!4m5!3m4!1s0x0:0x8e3b5c9219107f6d!8m2!3d36.373244!4d127.360578" target="_blank"> {{ $t('address', language) }} </a></p>
             <p>{{ $t('working-hour', language) }}</p>
-            <p> 042-350-0386 </p>
-            <p> scspace.kaist@gmail.com </p><br />
+            <p><a href="tel:+82-42-350-0386"> 042-350-0386 </a></p>
+            <p><a href="mailto:scspace.kaist@gmail.com"> scspace.kaist@gmail.com </a></p><br />
           </div>
         </div>
 
@@ -70,16 +70,16 @@ footer.footer h2 {
   margin-bottom: 0.7em;
 }
 
-footer.footer li>a {
+footer.footer a {
   color: #333;
 }
 
-footer.footer li>a:hover {
+footer.footer a:hover {
   color: black;
   text-decoration: underline;
 }
 
-footer.footer li>a.is-active {
+footer.footer a.is-active {
   color: black;
   text-decoration: underline;
 }

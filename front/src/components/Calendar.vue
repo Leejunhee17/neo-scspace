@@ -41,7 +41,7 @@ en:
       aspectRatio: 1,
       eventColor: '#ff3860'
     }"
-    @event-created="create" />
+    @event-created="showModal" />
   <div class="modal" :class="{'is-active' : modalVisibility}">
     <div class="modal-background" @click="hideModal"></div>
     <div class="modal-card">
@@ -54,11 +54,35 @@ en:
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input class="input is-info" type="text" placeholder="e.g. 인권 영화제">
+                <input v-model="title" class="input is-info" type="text">
               </div>
               <!-- <p class="help">
                 꼭 입력해야 합니다
               </p> -->
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label"> 시작 시간 </label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input v-model="start" class="input is-info" type="datetime-local">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label"> 끝 시간 </label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input v-model="end" class="input is-info" type="datetime-local">
+              </div>
             </div>
           </div>
         </div>
@@ -105,15 +129,19 @@ export default {
   data () {
     return {
       modalVisibility: false,
-      events: 'http://127.0.0.1:3000/events'
+      events: 'http://127.0.0.1:3000/events',
+      title: '',
+      start: '',
+      end: ''
     }
   },
   computed: {
     ...mapState(['language'])
   },
   methods: {
-    create (event) {
-      // console.log(event.start.toISOString(), event.end.toISOString())
+    showModal (event) {
+      this.start = event.start.toISOString()
+      this.end = event.end.toISOString()
       this.modalVisibility = true
     },
     hideModal () {

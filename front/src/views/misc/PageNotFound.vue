@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 .notification {
-  margin: 15em auto;
+  margin: 13em auto 17em;
   max-width: 768px;
 }
 
