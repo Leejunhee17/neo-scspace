@@ -20,6 +20,8 @@ import SpaceIntro from '@/views/Intro/Space'
 
 import Manage from '@/views/Manage/Manage'
 
+import PageNotFound from '@/views/misc/PageNotFound'
+
 Vue.use(Router)
 
 const spaces = 'workshop|bookdabang|piano-room|individual-practice-room|seminar-room|multipurpose-room|dance-studio|group-practice-room|ullim-hall|mirae-hall|open-space'
@@ -103,6 +105,7 @@ export default new Router({
       path: '/manage',
       name: 'Manage',
       component: Manage
-    }
+    },
+    { path: '*', component: PageNotFound }
   ]
 })
