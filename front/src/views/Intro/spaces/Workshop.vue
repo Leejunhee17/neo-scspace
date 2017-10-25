@@ -4,7 +4,7 @@
   <div>
     <div class="columns">
       <div class="column is-10 is-offset-1">
-        <img src="./../../../assets/images/space/workshop-1.jpg" alt="창작공방의 멋진 풍경" style='width: 100%'>
+        <img src="./../../../assets/images/space/workshop-1.jpg" alt="창작공방의 멋진 풍경" style="width: 100%">
         <div class="columns" style='margin-top: 10px'>
           <h1 class="title column is-one-quarter has-text-primary"> 창작공방<br> 소개</h1>
           <div class="column">
@@ -21,14 +21,7 @@
               <div class="column">
                 <img src="./../../../assets/info-icons/facility.png" alt="장비" class="intro-icon">
                 <p>
-                    <small>드라이버, 톱 등 공구</small><br>
-                    <small>재봉틀 및 관련 용구</small><br>
-                    <small>이젤 및 화방 용구</small><br>
-                    <small>라이트 박스</small><br>
-                    <small>빔 프로젝터, 스피커</small><br>
-                    <small>화이트보드</small><br>
-                    <small>수도 시설</small><br>
-                    <small>그리고 당신을 위한 사물함</small>
+                    <small> 다양한 공구</small>
                 </p>
               </div>
               <div class="column">
@@ -58,7 +51,7 @@
                 </p>
                 <h3> 작업물의 보관 </h3>
                 <p>
-                    작업이 끝나지 않아 창작공방에 계속해서 보관해야 할 경우에는, 이름과 연락처, 보관 기한, 작업물을 적어서 작업물에 붙여 주시면 최대 <span class="has-text-primary">7일</span>간 보관이 가능합니다.
+                    작업이 끝나지 않아 창작공방에 계속해서 보관해야 할 경우에는, 이름과 연락처, 보관 기한, 작업물을 적어서 작업물에 붙여 주시면 최대 <span class="has-text-danger">7일</span>간 보관이 가능합니다.
                 </p>
             </div>
         </div>
@@ -168,7 +161,7 @@ export default {
 
 <style>
  .intro-icon {
-   height: 100px;
+   height: 64px;
    margin: 20px 0px;
  }
 </style>
