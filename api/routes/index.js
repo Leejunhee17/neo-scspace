@@ -1,11 +1,7 @@
 import express from 'express'
-import pgPromise from 'pg-promise'
+import db from './db.js'
 
 let router = express.Router()
-
-let pgp = pgPromise({})
-let connectionString = 'postgres://localhost:5432/scspace'
-let db = pgp({connectionString})
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
