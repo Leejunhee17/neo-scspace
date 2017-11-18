@@ -97,7 +97,7 @@
                             </p>
                         </div>
                         <div class="column">
-                            <img src="./../../../assets/info-icons/facility.png" alt="타인 작업물 주의" class="intro-icon"/>
+                            <img src="./../../../assets/info-icons/caution-facility.png" alt="타인 작업물 주의" class="intro-icon"/>
                             <p>
                                 <small>타인 작업물 주의</small>
                             </p>
