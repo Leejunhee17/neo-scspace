@@ -2,8 +2,10 @@ import db from './../db.js'
 
 async function getSpaceId (spaceName) {
   try {
-    await db.one('SELECT space_id FROM spaces WHERE space_name = $1;', spaceName)
+    const result = await db.spaces.getId(spaceName)
+    return result.space_id
   } catch (err) {
+    // console.log(err)
     throw new NoSuchSpaceException(spaceName)
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="section">
-      <calendar />
+      <calendar :space="'piano-room-1'"/>
     </section>
   </div>
 </template>

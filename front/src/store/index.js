@@ -1,11 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
+const api = 'http://localhost:3000'
+
 export default new Vuex.Store({
   state: {
-    language: 'ko' // ko, en 만 가능함
+    language: 'ko', // ko, en 만 가능함
+    api
   },
   mutations: {
     initLanguage (state) {
@@ -30,6 +34,11 @@ export default new Vuex.Store({
     },
     updateLanguage (state, newLanguage) {
       state.language = newLanguage
+    }
+  },
+  actions: {
+    createEvent (state, event) {
+      axios.post(`${api}/events`, event)
     }
   }
 })

@@ -17,12 +17,11 @@ router.get('/', async (req, res, next) => {
     if (!isValidDatetime(end)) throw new DatetimeParseException('end')
 
     // Query
-    const query = 'SELECT event_id AS id, title, event_start AS start, event_end AS end FROM calendar WHERE space_id = ${spaceId} AND event_start > ${start} AND event_end < ${end};'
-    const events = await db.any(query, {start, end, spaceId})
+    const events = await db.events.get(spaceId, start, end)
 
     res.status(200).json(events)
   } catch (err) {
-    if (err instanceof DatetimeParseException || err instanceof NoSuchSpaceException) {
+    if (err instanceof DatetimeParseException || err instanceof Error) {
       res.status(400).json((({name, message}) => ({name, message}))(err))
     } else {
       res.status(500).json({message: 'Internal server error.', err})
@@ -35,18 +34,18 @@ router.post('/', async (req, res, next) => {
     const spaceId = await getSpaceId(req.body.space)
     const start = req.body.start
     const end = req.body.end
-    const title = req.body.title
+    const title = req.body.title.trim()
 
     // Test time format
     if (!isValidDatetime(start)) throw new DatetimeParseException('start')
     if (!isValidDatetime(end)) throw new DatetimeParseException('end')
+    if (title === '') throw new Error('Parameter `title` expects no empty string.')
 
-    const query = 'INSERT INTO calendar(space_id, event_start, event_end, title) VALUES (${spaceId}, ${start}, ${end}, ${title})'
-    const result = await db.one(query, {spaceId, start, end, title})
+    const result = await db.events.post(spaceId, start, end, title)
 
     res.status(200).json(result)
   } catch (err) {
-    if (err instanceof DatetimeParseException || err instanceof NoSuchSpaceException) {
+    if (err instanceof DatetimeParseException || err instanceof NoSuchSpaceException || err instanceof Error) {
       res.status(400).json(err)
     } else {
       res.status(500).json({message: 'Internal server error.', err})

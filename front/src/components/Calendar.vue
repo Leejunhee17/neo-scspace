@@ -93,7 +93,7 @@ en:
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button class="button is-info">
+                <button @click="createEvent({space, start, end, title})" class="button is-info">
                   예약하기
                 </button>
               </div>
@@ -123,22 +123,31 @@ en:
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
+  props: {'space': String},
   data () {
     return {
       modalVisibility: false,
-      events: 'http://127.0.0.1:3000/events',
       title: '',
       start: '',
       end: ''
     }
   },
   computed: {
-    ...mapState(['language'])
+    ...mapState(['language', 'api']),
+    events: function () {
+      return {
+        url: `${this.api}/events`,
+        data: {
+          space: this.space
+        }
+      }
+    }
   },
   methods: {
+    ...mapActions(['createEvent']),
     showModal (event) {
       this.start = event.start.toISOString()
       this.end = event.end.toISOString()
