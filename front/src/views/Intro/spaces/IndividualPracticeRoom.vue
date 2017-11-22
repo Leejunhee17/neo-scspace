@@ -47,7 +47,7 @@
                       사용 14일 전부터 하루 전 21:00까지 예약이 가능합니다.
                   </li>
                   <li>
-                      현재는 <span class="has-text-danger">11월 9일</span>부터 <span class="has-text-danger">11월 21일</span>까지의 예약만 가능합니다.
+                      현재는 <span class="has-text-danger"> {{ init }} </span>부터 <span class="has-text-danger"> {{ final }}</span>까지의 예약만 가능합니다.
                   </li>
                   <li>
                       하루에 최대 <span class="has-text-danger">2시간</span> 예약할 수 있습니다.
@@ -123,6 +123,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { DateTime } from 'luxon'
 
 export default {
   name: 'intro-individual-practice-room',
@@ -132,7 +133,13 @@ export default {
     }
   },
   computed: {
-    ...mapState(['language'])
+    ...mapState(['language']),
+    init: function () {
+      return DateTime.local().plus({days: 1}).toFormat("M'월' d'일'")
+    },
+    final: function () {
+      return DateTime.local().plus({days: 13}).toFormat("M'월' d'일'")
+    }
   }
 }
 </script>
