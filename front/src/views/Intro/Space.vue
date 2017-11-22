@@ -3,6 +3,7 @@
     <div class="container">
       <component :is="space"/>
       <!-- <full-calendar :events="events" :config="{locale:'ko'}" @event-created="drop" /> -->
+      
     </div>
   </div>
 </template>
