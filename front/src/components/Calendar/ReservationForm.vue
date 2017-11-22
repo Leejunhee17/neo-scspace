@@ -1,49 +1,6 @@
-<i18n>
-ko:
-  today: "오늘"
-  month: "월"
-  week: "주"
-  day: "일"
-  list: "일정 목록"
-  all-day-text: "종일"
-  no-events-message: '일정이 없습니다'
-
-en:
-  today: "Today"
-  month: "Month"
-  week: "Week"
-  day: "Day"
-  list: "List"
-  all-day-text: "All-day"
-  no-events-message: 'No events to display'
-</i18n>
 <template>
-<div>
-  <full-calendar 
-    :events="events"
-    :config="{
-      locale: language,
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,list'
-      },
-      buttonText: {
-        today: $t('today', language),
-        month: $t('month', language),
-        week: $t('week', language),
-        day: $t('day', language),
-        list: $t('list', language)
-      },
-      noEventsMessage: $t('no-events-message', language),
-      allDayText: $t('all-day-text', language),
-      height: 'auto',
-      aspectRatio: 1,
-      eventColor: '#ff3860'
-    }"
-    @event-created="showModal" />
-  <div class="modal" :class="{'is-active' : modalVisibility}">
-    <div class="modal-background" @click="hideModal"></div>
+  <div class="modal is-active">
+    <div class="modal-background" @click="$emit('hide-form')"></div>
     <div class="modal-card">
       <div class="box">
         <h1 class="title"> 새 이벤트 </h1>
@@ -93,7 +50,7 @@ en:
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button @click="createEvent({space, start, end, title})" class="button is-info">
+                <button @click="submitForm()" class="button is-info">
                   예약하기
                 </button>
               </div>
@@ -119,74 +76,39 @@ en:
       </footer> -->
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
-  props: {'space': String},
-  data () {
+  props: ['initialStart', 'initialEnd', 'space'],
+  data: function () {
     return {
-      modalVisibility: false,
-      title: '',
       start: '',
-      end: ''
+      end: '',
+      title: ''
     }
   },
-  computed: {
-    ...mapState(['language', 'api']),
-    events: function () {
-      return {
-        url: `${this.api}/events`,
-        data: {
-          space: this.space
-        }
-      }
-    }
+  mounted: function () {
+    this.start = this.initialStart
+    this.end = this.initialEnd
   },
   methods: {
     ...mapActions(['createEvent']),
-    showModal (event) {
-      this.start = event.start.toISOString()
-      this.end = event.end.toISOString()
-      this.modalVisibility = true
-    },
-    hideModal () {
-      this.modalVisibility = false
+    submitForm () {
+      this.createEvent({
+        space: this.space,
+        start: this.end,
+        end: this.end,
+        title: this.title
+      })
+      this.$emit('hide-form')
     }
   }
 }
 </script>
 
 <style>
-.fc button.fc-button {
-  text-shadow: none;
-  background: whitesmoke;
-  border: 1px solid #dbdbdb
-}
-
-.fc button.fc-button:hover, .fc button.fc-button:focus {
-  box-shadow: none;
-  background-color: #dadada;
-}
-
-.fc button.fc-button:disabled:hover {
-  background-color: whitesmoke;
-  cursor: default;
-}
-
-.fc button.fc-button.fc-state-active {
-  /* border-color: black; */
-  background-color: #d9d9d9;
-  box-shadow: none;
-}
-
-/* @media screen and (min-width: 768px) {
-  html[lang="ko"] .fc .fc-right button.fc-button {
-    padding: 0 1.5rem;
-  }
-} */
 
 </style>
