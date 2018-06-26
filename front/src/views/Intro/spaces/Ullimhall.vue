@@ -57,7 +57,7 @@
                 <p>
                     - 사용 45일 전부터 14일 전 21:00까지 예약이 가능합니다.
                 <p>
-                    - 현재는 <span class="has-text-danger">5월 23일</span>부터 <span class="has-text-danger">6월 22일</span>까지의 예약이 가능합니다.
+                    - 현재는 <span class="has-text-danger">{{ init }}</span>부터 <span class="has-text-danger">{{ final }}</span>까지의 예약이 가능합니다.
                 <p>
                     - 장비 사용 시 <span class="has-text-danger">근로학생</span>이 배정됩니다. 예약 승인 시 근로 장학생의 연락처가 제공되며 리허설과 행사에서 도움을 받을 수 있습니다. 주말의 경우에는 근로 장학생에게 시간당 12,000원의 수당을 지급해야합니다. 단, 공연집중기간에는 수당 지급 없이 근로 장학생의 도움을 받을 수 있습니다.
                 <p>
@@ -67,7 +67,7 @@
                 <p>
                     - 사용 45일 전부터 3일 전 21:00까지 예약이 가능합니다.
                 <p>
-                    - 현재는 <span class="has-text-danger">5월 12일</span>부터 <span class="has-text-danger">6월 22일</span>까지의 예약이 가능합니다.
+                    - 현재는 <span class="has-text-danger">{{ init2 }}</span>부터 <span class="has-text-danger">{{ final2 }}</span>까지의 예약이 가능합니다.
                 <p>
                     - 예약의 취소는 행사 하루 전 오후 9시까지 학생문화공간위원회에 통보해야 합니다.
                 <p>
@@ -212,6 +212,10 @@
 <script>
 import { mapState } from 'vuex'
 
+import {
+  DateTime
+} from 'luxon'
+
 export default {
   name: 'intro-workshop',
   metaInfo () {
@@ -220,7 +224,27 @@ export default {
     }
   },
   computed: {
-    ...mapState(['language'])
+    ...mapState(['language']),
+    init: function () {
+      return DateTime.local().plus({
+        days: 10
+      }).toFormat("M'월' d'일'")
+    },
+    final: function () {
+      return DateTime.local().plus({
+        days: 45
+      }).toFormat("M'월' d'일'")
+    },
+    init2: function () {
+      return DateTime.local().plus({
+        days: 2
+      }).toFormat("M'월 'd'일")
+    },
+    final2: function () {
+      return DateTime.local().plus({
+        days: 45
+      }).toFormat("M'월' d'일'")
+    }
   }
 }
 </script>
