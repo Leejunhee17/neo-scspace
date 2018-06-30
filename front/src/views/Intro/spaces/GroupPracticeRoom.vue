@@ -77,7 +77,7 @@
 
                 <h3> 예약 가능 시간 </h3>
                 <p>
-                    - 사용 14일 전부터 하루 전 21:00까지 예약이 가능합니다.
+                    - 14일 전부터 2일 전 23시 59분까지 예약이 가능합니다.
                 <p>
                     - 현재는 <span class="has-text-danger">{{init}}</span>부터 <span class="has-text-danger">{{final}}</span>까지의 예약이 가능합니다.
                 <p>
