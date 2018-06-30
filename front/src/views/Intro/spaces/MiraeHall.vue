@@ -59,7 +59,7 @@
 
 
           <ul class="list-unstyled">
-            <li>10일 전 23시 59분까지 예약이 가능합니다.</li>
+            <li>사용 45일 전부터 10일 전 23시 59분까지 예약이 가능합니다.</li>
             <li>현재는 <span class="has-text-danger">{{ init }}</span>부터
               <span class="has-text-danger">{{ final }}</span>까지의 예약이 가능합니다.
             </li>
@@ -71,11 +71,11 @@
           </ul>
           <h4> 장비 미사용 시 </h4>
           <ul class="list-unstyled">
-            <li>사용 45일 전부터 3일 전 21:00까지 예약이 가능합니다.</li>
+            <li>사용 45일 전부터 2일 전 23시 59분까지 예약이 가능합니다.</li>
             <li>현재는 <span class="has-text-danger"> {{ init2 }}</span>부터
               <span class="has-text-danger">{{ final2 }}</span>까지의 예약이 가능합니다.
             </li>
-            <li> 예약의 취소는 행사 하루 전 오후 9시까지 학생문화공간위원회에 통보해야 합니다.</li>
+            <li> 예약의 취소는 행사 2일 전 23시 59분까지 학생문화공간위원회에 통보해야 합니다.</li>
           </ul>
           <small> * 일주일의 시작은 월요일입니다. </small>
           <h3> 공연집중기간 예약 </h3>
@@ -401,7 +401,7 @@ export default {
     },
     init2: function () {
       return DateTime.local().plus({
-        days: 3
+        days: 2
       }).toFormat("M'월 'd'일")
     },
     final2: function () {
